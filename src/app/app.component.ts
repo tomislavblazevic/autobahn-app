@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AutobahnService } from './autobahn.service';
+
 
 @Component({
   selector: 'app-root',
