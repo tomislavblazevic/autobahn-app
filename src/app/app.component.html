@@ -1,11 +1,18 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div *ngIf="autobahnData">
+  <h2>AutoBahn Data</h2>
+  <ul>
+    <li><strong>Name:</strong> {{ autobahnData.name }}</li>
+    <li><strong>Number:</strong> {{ autobahnData.number }}</li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
 
 <style>
   :host {
