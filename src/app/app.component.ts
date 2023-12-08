@@ -1,27 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { AutobahnService } from './autobahn.service';
-
+import { Component } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  autobahnData: any;
-  
-  constructor(private autobahnService: AutobahnService) {}
+export class AppComponent {
+  title = 'AutobahnApp';
 
-  ngOnInit() {
-    this.getAutobahnData();
-  }
-
-  getAutobahnData() {
-    this.autobahnService.getAutobahnData().subscribe((data) => {
-      this.autobahnData = data;
-
-    });
-  }
-   
-  }
-
+  displayedColumns: string[] = ['position', 'make', 'model', 'year'];
+  dataSource = new MatTableDataSource([
+    { position: 1, make: 'Audi', model: 'A4', year: 2016 },
+    { position: 2, make: 'BMW', model: 'X5', year: 2013 },
+    { position: 3, make: 'Chrysler', model: 'Town & Country', year: 2011 },
+    { position: 4, make: 'Honda', model: 'Accord', year: 2018 },
+    { position: 5, make: 'Jaguar', model: 'XF', year: 2017 },
+    { position: 6, make: 'Mercedes-Benz', model: 'C-Class', year: 2018 }
+  ]);
+}
