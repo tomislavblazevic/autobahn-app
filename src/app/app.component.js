@@ -9,7 +9,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class AppComponent {
   title = 'AutobahnApp';
 
-  displayedColumns: string[] = ['position', 'make', 'model', 'year'];
+  displayedColumns = ['position', 'make', 'model', 'year'];
   dataSource = new MatTableDataSource([
     { position: 1, make: 'Audi', model: 'A4', year: 2016 },
     { position: 2, make: 'BMW', model: 'X5', year: 2013 },

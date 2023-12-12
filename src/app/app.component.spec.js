@@ -1,16 +1,16 @@
+
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { Title } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AutobahnService } from './autobahn.service';
+import { isAssertionExpression } from 'typescript';
+
 
 
 describe('AppComponent', () => {
-  let component: AppComponent;
-  let fixture: any;
-  let titleService: Title;
-  let autobahnService: AutobahnService;
+
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -51,7 +51,8 @@ describe('AppComponent', () => {
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
+const compiled = fixture.nativeElement;
+const title = fixture.debugElement.nativeElement.querySelector;
     expect(compiled.querySelector('.content span')?.textContent).toContain('autobahn-app app is running!');
   });
 });
